@@ -1,0 +1,303 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+/** Browser Overide **/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/** General Styles **/
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Generic project styles */
+    color: #252525;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Afacad Flux', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #252525;
+    margin: 0;
+}
+
+/** Header **/
+header {
+    background-color: #009a44;
+    margin: 0;
+    padding: 0 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style-type: none;
+    color:#fafafa;
+    margin: 0;
+}
+
+#menu > li {
+    margin-bottom: 1em;
+}
+
+.hidden-heading {
+    display:none;
+}
+
+#logo {
+    font-size: 6vw;
+}
+
+/** Nav Bar styling + drop-down menu **/
+nav {
+    position: absolute;
+    background-color: #009a44;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+}
+
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+/** Nav Toggle **/
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+.active {
+    background-color: #ff8200;
+}
+
+/** Main Body **/
+main {background-color: #fafafa;
+    /* Make main element take up any surplus space to push footer down */
+    flex: 1 0 auto;  
+    margin-top: 47px;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#intro-list {
+    list-style-type: none;
+    text-align: center;
+}
+
+#more-about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-container1 {
+    display: flex;
+    align-items: stretch;
+}
+
+/* hero section */
+#hero {
+    height: 400px;
+    width: 100%;
+    background: url("../images/pexels-ivan-samkov-9630204.jpg") no-repeat center center/cover;
+    position: relative;
+}
+
+#cover-text {
+    /* Final rgba value sets the opacity so it is semi-transparant */
+    background-color: rgb(255,130,0,.7);
+    font-size: 130%;
+    position: absolute;
+    bottom: 10px;
+    width: 75%;
+    min-height: 100px;
+    max-height: 250px;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+#cover-text > h2, #cover-text > h3 {
+    color: #ffffff;
+}
+
+/* Circle Image */
+#circle-cover-bg {
+    background: url(../images/heart_015-edit.png) no-repeat top center/cover;
+    width: 90vw;
+    height: 90vw;
+    margin-bottom: 20px;
+    /* Makes the square image into a circle */
+    border-radius: 50%;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.youtube-video {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+iframe {
+    padding: 10px 10px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    width: 100%;
+    max-width: 560px;
+}
+
+/** About section **/
+#h2-about {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#about-text {
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+/** WhatIs information signs of radicalization section **/
+
+#rad-intro {
+    padding: 5px 10px;
+    text-align: center;
+}
+
+/** rad-signs section **/
+details {
+    list-style-type: none;
+}
+
+details summary {
+        padding: 10px;
+        width: 200px;
+        background-color: #eeeeee;
+        border: none;
+        box-shadow: 1px 1px 2px #bbbbbb;
+        cursor: pointer;
+        margin: 0 20px;
+      }
+      
+details > p {
+    background-color: #eeeeee;
+    padding: 4px;
+    margin: 0 20px;
+    box-shadow: 1px 1px 2px #bbbbbb;
+}
+
+span {
+    margin-left: 20px;
+}
+
+#signs-image {
+    background: url(../images/GettyImages-1030307374.jpg) no-repeat top center/cover;
+    height: 200px;
+    width: 300px;
+    max-width: 400px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    align-items: float;
+}
+
+#links {
+    text-align: center;
+}
+/** Footer Section **/
+
+footer {
+    background-color: #004e22;
+}
+
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #fafafa;
+}
+
+/** Media Queries Section **/
+
+@media screen and (min-width: 768px) {
+    /* Header */
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu > li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    /* Hero */
+    #cover-text {
+        width: 300px;
+        right: 50px;
+    }   
+
+    /* Main content */
+    main {
+        /* Push main content down to accommodate larger header */
+        margin-top: 79px;
+    }
+
+}
